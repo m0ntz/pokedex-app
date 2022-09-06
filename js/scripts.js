@@ -14,4 +14,9 @@ let pokemonList = [
     height: 0.5,
     types: ["psychic", "poison"],
   },
+  {
+    name: "Togepi",
+    height: 0.3,
+    types: ["fairy", "psychic"],
+  },
 ];
