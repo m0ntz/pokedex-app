@@ -1,5 +1,6 @@
-// Array of pokemons
-let pokemonRepository = function () {
+// IIFE
+let pokemonRepository = (function () {
+  // Array of pokemons
   let pokemonList = [
     {
       name: "Bulbasaur",
@@ -22,11 +23,29 @@ let pokemonRepository = function () {
       types: ["fairy", "psychic"],
     },
   ];
-};
+
+  // getAll function
+
+  function getAll() {
+    return pokemonList;
+  }
+
+  //add(item) function
+
+  function add(item) {
+    pokemonList.push(item);
+  }
+
+  return {
+    getAll: getAll,
+    add: add,
+  };
+})();
 
 // show each pokemon with its height
+// forEach loop
 
-pokemonList.forEach(function (pokemon) {
+pokemonRepository.getAll().forEach(function (pokemon) {
   if (pokemon.height > 0.6) {
     document.write(
       "<li>" +
