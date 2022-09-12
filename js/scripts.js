@@ -36,30 +36,27 @@ let pokemonRepository = (function () {
     pokemonList.push(item);
   }
 
+  //add button and its class
+
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listItem = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-pokemon");
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem);
+  }
+
   return {
     getAll: getAll,
     add: add,
+    addListItem: addListItem,
   };
 })();
 
-// show each pokemon with its height
-// forEach loop
+// forEach loop function
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-  if (pokemon.height > 0.6) {
-    document.write(
-      "<li>" +
-        pokemon.name +
-        " " +
-        "(height: " +
-        pokemon.height +
-        ")" +
-        " - Wow, that's big!" +
-        "</li>"
-    );
-  } else {
-    document.write(
-      "<li>" + pokemon.name + " " + "(height: " + pokemon.height + ")" + "</li>"
-    );
-  }
+  pokemonRepository.addListItem(pokemon);
 });
