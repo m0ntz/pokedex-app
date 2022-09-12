@@ -36,7 +36,7 @@ let pokemonRepository = (function () {
     pokemonList.push(item);
   }
 
-  //add button and its class
+  //add button and its class from js
 
   function addListItem(pokemon) {
     let pokemonList = document.querySelector(".pokemon-list");
@@ -44,8 +44,18 @@ let pokemonRepository = (function () {
     let button = document.createElement("button");
     button.innerText = pokemon.name;
     button.classList.add("button-pokemon");
+    //append newly created button
     listItem.appendChild(button);
     pokemonList.appendChild(listItem);
+    // added button eventListener
+    button.addEventListener("click", function () {
+      showDetails(pokemon);
+    });
+  }
+
+  //showDetails function for eventListener once the button is clicked
+  function showDetails(pokemon) {
+    console.log(pokemon);
   }
 
   return {
