@@ -10,7 +10,6 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  max-width: 400px;
   font-weight: 400;
   font-size: 16px;
   margin: 0 auto;
@@ -20,7 +19,7 @@ body {
 
 .navbar {
   background-color: var(--secondary-color);
-  padding: 30px;
+  padding: 25px;
   font-weight: 600;
   color: #605e65;
 }
@@ -32,15 +31,18 @@ header img {
 
 .container {
   background: var(--primary-color);
-  padding: 30px;
   text-align: center;
-  align-items: center;
-  margin-top: 7px;
+}
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
 }
 
 .list-group-item {
   background: var(--primary-color);
   border: none;
+  padding: 0px;
 }
 
 .button-pokemon {
@@ -67,6 +69,11 @@ header img {
 
 .modal-content {
   border: 6px solid #4c1c6d;
+}
+
+.modal-header {
+  background-color: #4c1c6d;
+  color: white;
 }
 
 .modal-title {
