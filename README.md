@@ -7,8 +7,8 @@ data from an external API and enables the viewing of data points in detail.
 
 ## User Goals
 
-Your users should be able to view a list of data and see more details for a given data item on demand.
-It’s up to you to come up with a type of data you want to display (see this list of [public APIs](https://github.com/toddmotto/public-apis) for an example).
+Users should be able to view a list of data and see more details for a given data item on demand.
+
 
 ### API Used
 
