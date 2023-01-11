@@ -37,7 +37,8 @@ header img {
 }
 .list-group-item {
   border: none;
-  padding-left: 10px;
+  padding-left: 20px;
+  text-align: center;
 }
 .button-pokemon,
 .modal-title {
